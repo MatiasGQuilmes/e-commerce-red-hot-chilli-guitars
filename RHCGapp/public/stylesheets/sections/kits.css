@@ -1,5 +1,4 @@
 .kits {
-	padding: 11rem 0;
 	width: 100vw;
 }
 
@@ -136,6 +135,18 @@
     transition: transform .2s;
 }
 
+@media screen and (min-width: 500px){
+	section.kits {
+		padding: 7rem 0;
+	}
+}
+
+@media screen and (min-width: 612px){
+	section.kits {
+		padding: 13rem 0;
+	}
+}
+
 @media screen and (min-width: 768px){
 	.kits {
 		padding: 11rem 0;
@@ -172,6 +183,7 @@
 	}
 
 	.kits .slide{
+		width: 80vw;
 		justify-content: space-around;
 		flex-wrap: wrap;
 	}

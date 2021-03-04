@@ -223,9 +223,6 @@
 
 
 @media screen and (min-width: 1200px) {
-	footer.footer {
-		background-color: #8d2e21;
-	}
 	.footer {
 		background-image: url("/img/fondos/footer_fondo.svg");
 		background-repeat: no-repeat;
@@ -236,8 +233,6 @@
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
-		margin: -41px;
-		margin-left: -.5px;
 	}
 
 	.footer__container {
@@ -303,6 +298,7 @@
 		
 	}
 
+
 	.medios-texto{
 		font-size: 3rem;
 	}
@@ -316,8 +312,8 @@
 		align-items: center;
 	}
 
-	.img--ml{
-		width: 13rem;
+	.img--ml{	
+   		width: 16rem;
 	}
 
 

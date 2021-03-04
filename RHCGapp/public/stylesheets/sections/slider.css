@@ -7,7 +7,6 @@
 .slider--img {
 
 	width: 100%;
-	height: 100%;
 	border: 4px solid #a20a0a;
 	outline: none;
 }
@@ -34,6 +33,8 @@
 	}
 	.slider--img{
 		height: 96%;
+		border-right: none;
+		border-left: none;
 	}
 	
 }

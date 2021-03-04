@@ -15,11 +15,6 @@
 
 
 
-            <!------------titulo primer cajita------------->
-
-            <div class="title-main">
-                <h1><%= producto.categoria %></h1>
-            </div>
 
 
             <!------------------------------------------------------>
@@ -30,9 +25,16 @@
             <!-----producto con los botones de comprar------>
 
             <div class="product-main">
+                
+            <!------------titulo primer cajita------------->
+            <div class="container-titles">
+                <div class="title-main">
+                    <h1><%= producto.categoria %></h1>
+                </div>
                 <div class="title-guitar">
                     <h2><%= producto.instrumento%>  </h2>
                 </div>
+            </div>
                 <div class="product-img">
                     <img src="/img/instrumentos/<%= producto.categoria %>/<%= producto.img %>" alt="">
                 </div>
