@@ -20,7 +20,7 @@
 .cargaProductos .carga{
 	padding: 2rem;
 	background-color:  var(--color-primary-yellow);
-	margin: 0 auto;
+	margin: 2rem auto 0 auto;
 	width: 80vw;
 	display: flex;
 	flex-direction: column;
@@ -28,10 +28,35 @@
 	font-size: 1.5rem;
     box-shadow: var(--primary-shadow-down);
 }
-.cargaProductos .carga div{	
+.cargaProductos .log-row{	
 	margin-bottom: 1rem;
 	display: flex;
 	flex-direction: column;	
+}
+
+
+.cargaProductos .kit--row{
+	
+	margin: 1.5rem 0 1rem 0;
+	display:flex;
+	align-items: center;
+	justify-content: space-between;
+	border-radius: .3rem;
+	padding: .3rem 1rem;
+	background-color: transparent;
+	box-shadow: inset .3rem .3rem 1rem rgba(126, 126, 126, 0.4), inset -.3rem -.3rem 1rem rgba(126, 126, 126, 0.4);
+}
+
+.cargaProductos .kit--check{
+	margin-left: 2rem;
+}
+
+.cargaProductos .desc-row{
+	margin-bottom: unset;
+}
+
+.cargaProductos .description{
+	padding: 1rem;
 }
 
 .cargaProductos .formSelect{
@@ -54,7 +79,8 @@
 	font-family: lobster;
 	font-size: 2rem;
 	box-shadow: var(--primary-shadow-down);
-
+	transition: all .2s;
+	cursor: pointer;
 }
 
 .cargaProductos .btn--submit{
@@ -71,9 +97,16 @@
 }
 
 
-@media screen and (min-width: 1200px){
+@media screen and (min-width:768px){
+	.cargaProductos .desc-row{
+		margin-bottom: 3rem;
+	}
+}
+
+
+@media screen and (min-width: 1024px){
     .cargaProductos{
-        padding: 15rem 0 25rem 0;
+        padding: 20rem 0 25rem 0;
     }
 
 	.cargaProductos .carga{
@@ -86,12 +119,12 @@
 		padding: 2rem;
 	}
 	
-	.cargaProductos .carjaIzquierda,
-	.cargaProductos .carjaDerecha{
+	.cargaProductos .cajaIzquierda,
+	.cargaProductos .cajaDerecha{
 		width: 48%;
 	}
 	
-	.cargaProductos .carjaIzquierda ::after{
+	.cargaProductos .cajaIzquierda ::after{
 		content: "";
 		display: block;
 		width: .5rem;
@@ -101,5 +134,23 @@
 		top: 2rem;
 		right: 49%;
 		border-radius: .3rem;
+	}
+
+	.cargaProductos .desc-row{
+		margin-bottom: unset;
+	}
+
+	.cargaProductos .btn--submit{
+		cursor: pointer;
+	}
+
+	.cargaProductos .btn--submit:hover,
+	.cargaProductos .btn--productos:hover{
+		transform: scale(1.1);
+	}
+
+	.cargaProductos .btn--submit:active,
+	.cargaProductos .btn--productos:active{
+		transform: scale(.9);
 	}
 }

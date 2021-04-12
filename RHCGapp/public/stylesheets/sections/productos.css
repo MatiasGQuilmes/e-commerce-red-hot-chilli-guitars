@@ -1,15 +1,21 @@
-.productos .footer {
-    background-color:unset;
-}
-
-body{
+/* body{
     background-image: var(--background);
     background-repeat: no-repeat;
     background-size: cover;
-    /* background-blend-mode: color-burn; */
+    background-blend-mode: color-burn; 
+} */
+
+.productos{
+    width: 100vw;
+    height: 100%;
+    padding: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: var(--background) !important;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
-
-
 
 .container-products{
     display: flex;
@@ -19,28 +25,13 @@ body{
     /* background-image: var(--background); */
 }
 
-.productos{
-    width: 100vw;
-    height: 100%;
-    padding: 5rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-image: var(--background);
-}
-
-.container-title {
-    width: 80%;
-    /* display: flex; */
-}
-
 .productos-title{
     font-family: lobster;
-    font-size: 4rem;
+    font-size: 3rem;
     color: var(--color-primary-red);
     text-align: center;
     line-height: .9;
-    margin-bottom: 5.5rem;
+    margin-bottom: 3.5rem;
 }
 
 .productos-container{
@@ -67,11 +58,13 @@ body{
     border: .3rem solid var(--color-primary-darkRed);
     border-radius: 1rem;
     padding: .5rem 0;
+
 }
 
 .img--productos{
     width: 100%;
     height: 100%;
+    object-fit: contain;
 }
 
 .productos-text{
@@ -98,7 +91,7 @@ body{
     border-radius: .3rem;
     box-shadow: var(--primary-shadow-down);
     color: var(--color-primary-yellow);
-    font-size: 2.5rem;
+    font-size: 1.8rem;
     font-family: lobster;
     text-transform: capitalize;
     width: 100%;
@@ -107,26 +100,47 @@ body{
 }
 
  .btn--editar{
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
     background-color: var(--color-primary-green);
 
 }
 
  .btn--borrar{
     background-color: var(--color-primary-red);
+    cursor: pointer;
 }
 
 
- .btn--goTop{
-    background-color: var(--color-primary-darkRed);
-    color: var(--color-primary-yellow);
-    position: fixed;
-    right: 1rem;
-    bottom: 12rem;
-    font-size: 2.5rem;
-    padding: .5rem .8rem;
-    border-radius: 5rem;
-    box-shadow: var(--primary-shadow-down);
+.paginator-row{
+
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.paginator-index{
+    padding: .5rem 1rem;
+    font-size: 2rem;
+    background-color: rgba(216, 216, 216, 0.473);
+    border-radius: 50%;
+    text-align: center;
+    font-family: arimo;
+    color: var(--color-primary-darkRed);
+}
+
+.paginator-btn{
+    height: 4rem;
+    width: 4rem;
+    display: inline-block;
+    background-image: url("/img/icons/icon_chevron.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: all .2s;
+}
+
+.paginator-btn:nth-child(1){
+    transform: rotate(180deg);
 }
 
 @media screen and (min-width:768px){
@@ -145,14 +159,14 @@ body{
     }
 }
 
-@media screen and (min-width: 1200px){
+@media screen and (min-width: 1024px){
 
 
     .productos{
         background-image: unset;
         padding: 20rem 0;
     }
-    
+
     .productos-item{
         width: 23vw;
     }
@@ -165,5 +179,43 @@ body{
     .btn--borrar:active{
         transform: scale(0.9);
         opacity: .9;
+    }
+
+
+    .error-row{
+        margin: 10rem 0 3rem 0;
+    }
+
+    .paginator-row{
+
+        width: 20%;
+        margin-top: 4rem;
+    }
+
+    .paginator-index{
+        padding: 1rem 2rem;
+        font-size: 3rem;
+    }
+
+    .paginator-btn{
+        width: 5rem;
+        height: 5rem;
+    }
+
+
+    .paginator-btn:not(:nth-child(1)):hover{
+        transform: scale(1.1);
+    }
+
+    .paginator-btn:not(:nth-child(1)):active{
+        transform: scale(0.9);
+    }
+
+    .paginator-btn:nth-child(1):hover{
+        transform: rotate(180deg) scale(1.1);
+    }
+
+    .paginator-btn:nth-child(1):active{
+        transform: rotate(180deg) scale(0.9);
     }
 }
